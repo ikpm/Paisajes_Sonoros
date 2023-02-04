@@ -1,0 +1,33 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after,
+html,
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul, 
+li, 
+ol {
+	list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Make images easier to work with */
+img {
+	max-width: 100%;
+	display: block;
+}
+
+
+
+

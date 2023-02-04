@@ -1,0 +1,103 @@
+@import url(reset.css);
+@font-face {
+    font-family: 'Playfair Display', serif;
+    src: local('fonts/PlayfairDisplay');
+}
+
+$back-color: #f8f9fa;
+$card-color: #ffffff;
+$font-head: bold 2.1rem 'Playfair Display', serif;
+$font-body: normal 1.2rem 'Playfair Display', serif;
+$font-color: #0d1321;
+
+.text-head {
+    font: $font-head;
+}
+body {
+    color: $font-color;
+    font: $font-body;
+    .container {
+        align-items: center;
+        background-color: $back-color;
+        display: grid;
+        gap: 0px;
+        grid-template:
+            "social" 40px
+            "logo" 250px
+            "navbar" 50px
+            "main" auto
+            "footer" 100px / 1fr;
+        height: 100vh;
+        justify-content: center;
+        width: 100%;
+        .header {
+            border-bottom: 2px solid $font-color;
+            grid-area: social;
+            height: 40px;
+            width: 100%;
+            .social-items {
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                .logo-items {
+                    img {
+                        height: 30px;
+                        margin: 5px 15px 0px 0px;
+                        width: 30px;
+                    }
+                }
+                .logo-items:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+        .logo {
+            grid-area: logo;
+            #logo-image {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                img {
+                    height: 250px;
+                    width: 250px;
+                }
+            }
+        }
+        .navbar {
+            grid-area: navbar;
+            .menu-items {
+                align-items:center;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+        .main {
+            display: grid;
+            grid-area: main;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            grid-auto-flow: dense;
+            grid-auto-rows: minmax(200px, auto);
+            height: auto;
+            padding: 20px;
+            .card {
+                align-items: center;
+                background-color: $card-color;
+                border-radius: 5px;
+                display: flex;
+                flex-direction:column;
+                height: 100%;
+                justify-content: flex-start;
+                width: 100%;
+                img {
+                    border-radius: 5px 5px 0 0;
+                }
+            }
+        }
+        .footer {
+            grid-area: footer;
+        }
+
+    }
+}
